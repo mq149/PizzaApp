@@ -15,7 +15,7 @@ namespace PizzaApp
 
     class Config
     {
-        public static string[] pages = { "main", "buyOptions", "menu", "ingredients", "beverage", "recipe", "payment", "thankYou" };
+        public static string[] pages = { "buyOptions", "menu", "ingredients", "beverage", "recipe", "payment", "thankYou" };
         public static string statusDefaultColor = "#FFFFFFFF";
         public static string statusLabelDefaultColor = "#FF000000";
         public static string statusActiveColor = "#FF63B995";

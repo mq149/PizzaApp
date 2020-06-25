@@ -277,7 +277,7 @@ namespace PizzaApp
             }
         }
 
-        private void MakePizzaCheckbox_Checked(object sender, RoutedEventArgs e)
+        private void MakePizzaCheckBox_Click(object sender, RoutedEventArgs e)
         {
             option = (makePizzaCheckbox.IsChecked ?? false) ? BuyOption.makePizza : BuyOption.buyPizza;
         }
