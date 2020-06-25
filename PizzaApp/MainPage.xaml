@@ -1,0 +1,14 @@
+﻿<Page x:Class="PizzaApp.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PizzaApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="523" d:DesignWidth="990"
+      Title="MainPage">
+
+    <Grid>
+        <Button Content="ĐẶT BÁNH PIZZA" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="250" Height="80" FontSize="24" Foreground="White" Background="#FF8D0101" BorderBrush="#00000000" Click="orderButtonClick"/>
+    </Grid>
+</Page>
