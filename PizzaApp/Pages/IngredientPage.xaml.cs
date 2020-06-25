@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace PizzaApp
 {
     /// <summary>
-    /// Interaction logic for MenuPage.xaml
+    /// Interaction logic for IngredientPage.xaml
     /// </summary>
-    public partial class MenuPage : Page
+    public partial class IngredientPage : Page
     {
-        public MenuPage()
+        public IngredientPage()
         {
             InitializeComponent();
         }
-       
     }
 }

@@ -9,8 +9,43 @@
         ">
     <Grid HorizontalAlignment="Left" Height="566" Margin="0" VerticalAlignment="Top" Width="990">
         <Frame x:Name="Main" HorizontalAlignment="Left" Height="566" VerticalAlignment="Top" Width="990" NavigationUIVisibility="Hidden"/>
-        <Button Content="Trở về" HorizontalAlignment="Left" Margin="10,536,0,0" VerticalAlignment="Top" Width="75" Click="backButtonClick"/>
-        <Button Content="Tiếp tục" HorizontalAlignment="Left" Margin="106,536,0,0" VerticalAlignment="Top" Width="75" Click="nextButtonClick"/>
+        <Button Content="Trở về" HorizontalAlignment="Left" Margin="200,10,0,0" VerticalAlignment="Top" Width="75" Click="backButtonClick"/>
+        <Button Content="Tiếp tục" HorizontalAlignment="Left" Margin="280,10,0,0" VerticalAlignment="Top" Width="75" Click="nextButtonClick"/>
+        <Grid x:Name="BuyPizzaStatusGrid" HorizontalAlignment="Left" Height="68" Margin="0,498,0,0" VerticalAlignment="Top" Width="990" Visibility="Hidden">
+            <Rectangle Fill="#FF63B995" HorizontalAlignment="Center" Height="3" Margin="0,0,0,31" Stroke="#00000000" VerticalAlignment="Center" Width="390"/>
+            <StackPanel HorizontalAlignment="Center" Height="52" Margin="0,0,400,0" VerticalAlignment="Center" Width="100">
+                <RadioButton x:Name="rb01" Content="" VerticalAlignment="Center" Background="White" Foreground="Black" BorderBrush="#FF63B995" Height="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="5.66,1.561" Margin="0" Padding="0" HorizontalAlignment="Center"/>
+                <Label x:Name="statuslb01" Content="Chọn bánh pizza" HorizontalContentAlignment="Center"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center" Height="52" Margin="0" VerticalAlignment="Center" Width="100">
+                <RadioButton x:Name="rb02" Content="" VerticalAlignment="Center" Background="White" Foreground="Black" BorderBrush="#FF63B995" Height="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="5.66,1.561" Margin="0" Padding="0" HorizontalAlignment="Center"/>
+                <Label x:Name="statuslb02" Content="Chọn nước uống" HorizontalContentAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Height="52" Margin="400,0,0,0" VerticalAlignment="Center" Width="100" HorizontalAlignment="Center">
+                <RadioButton x:Name="rb03" Content="" VerticalAlignment="Center" Background="White" Foreground="Black" BorderBrush="#FF63B995" Height="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="5.66,1.561" Margin="0" Padding="0" HorizontalAlignment="Center"/>
+                <Label x:Name="statuslb03" Content="Thanh toán" HorizontalContentAlignment="Center"/>
+            </StackPanel>
+        </Grid> 
+        <Grid x:Name="MakePizzaStatusGrid" HorizontalAlignment="Left" Height="68" Margin="0,498,0,0" VerticalAlignment="Top" Width="990" Visibility="Hidden">
+            <Rectangle Fill="#FF63B995" HorizontalAlignment="Center" Height="3" Margin="0,0,0,31" Stroke="#00000000" VerticalAlignment="Center" Width="550"/>
+            <StackPanel HorizontalAlignment="Center" Height="52" Margin="0,0,550,0" VerticalAlignment="Center" Width="120">
+                <RadioButton x:Name="rb11" Content="" VerticalAlignment="Center" Background="White" Foreground="#FF63B995" BorderBrush="#FF63B995" Height="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="5.66,1.561" Margin="0" Padding="0" HorizontalAlignment="Center"/>
+                <Label x:Name="statuslb11" Content="Chọn nguyên liệu" HorizontalContentAlignment="Center"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center" Height="52" Margin="0,0,180,0" VerticalAlignment="Center" Width="120">
+                <RadioButton x:Name="rb12" Content="" VerticalAlignment="Center" Background="White" Foreground="Black" BorderBrush="#FF63B995" Height="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="5.66,1.561" Margin="0" Padding="0" HorizontalAlignment="Center"/>
+                <Label x:Name="statuslb12" Content="Chọn nước uống" HorizontalContentAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Height="52" Margin="180,0,0,0" VerticalAlignment="Center" Width="120" HorizontalAlignment="Center">
+                <RadioButton x:Name="rb13" Content="" VerticalAlignment="Center" Background="White" Foreground="Black" BorderBrush="#FF63B995" Height="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="5.66,1.561" Margin="0" Padding="0" HorizontalAlignment="Center"/>
+                <Label x:Name="statuslb13" Content="Quy trình làm bánh" HorizontalContentAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Height="52" Margin="550,0,0,0" VerticalAlignment="Center" Width="120" HorizontalAlignment="Center">
+                <RadioButton x:Name="rb14" Content="" VerticalAlignment="Center" Background="White" Foreground="Black" BorderBrush="#FF63B995" Height="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="5.66,1.561" Margin="0" Padding="0" HorizontalAlignment="Center"/>
+                <Label x:Name="statuslb14" Content="Thanh toán" HorizontalContentAlignment="Center"/>
+            </StackPanel>
+        </Grid>
+        <CheckBox x:Name="makePizzaCheckbox" Content="Tự làm bánh" HorizontalAlignment="Left" Margin="371,13,0,0" VerticalAlignment="Top" Checked="MakePizzaCheckbox_Checked"/>
     </Grid>
 </Window>
    

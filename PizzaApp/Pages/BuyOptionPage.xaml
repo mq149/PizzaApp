@@ -5,13 +5,15 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:PizzaApp"
       mc:Ignorable="d" 
-      d:DesignHeight="523" d:DesignWidth="990"
+      d:DesignHeight="566" d:DesignWidth="990"
       Title="BuyOptionPage">
 
     <Grid>
-        <StackPanel HorizontalAlignment="Center" Height="80" Margin="0" VerticalAlignment="Center" Width="460" Orientation="Horizontal">
+        <StackPanel HorizontalAlignment="Center" Height="80" Margin="0,0,0,140" VerticalAlignment="Bottom" Width="460" Orientation="Horizontal">
             <Button Content="Mua bánh có sẵn" Width="210" Background="#FF8D0101" Foreground="White" BorderBrush="#00707070" FontSize="24"/>
             <Button Content="Tự làm bánh pizza" Width="210" Margin="40,0,0,0" Background="#FF8D0101" Foreground="White" BorderBrush="#00707070" FontSize="24"/>
         </StackPanel>
+        <Image Source="/PizzaApp;component/Images/buy-pizza.jpg" Height="207" Margin="265,0,0,220" Width="208" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        <Image Source="/PizzaApp;component/Images/make-pizza.png" HorizontalAlignment="Right" Height="238" Margin="0,0,250,220" VerticalAlignment="Bottom" Width="249"/>
     </Grid>
 </Page>

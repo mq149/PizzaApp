@@ -55,25 +55,32 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Config.cs" />
-    <Compile Include="PaymentPage.xaml.cs">
+    <Compile Include="Common\Config.cs" />
+    <Compile Include="Pages\IngredientPage.xaml.cs">
+      <DependentUpon>IngredientPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PaymentPage.xaml.cs">
       <DependentUpon>PaymentPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RecipePage.xaml.cs">
+    <Compile Include="Pages\RecipePage.xaml.cs">
       <DependentUpon>RecipePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ThankYouPage.xaml.cs">
+    <Compile Include="Pages\ThankYouPage.xaml.cs">
       <DependentUpon>ThankYouPage.xaml</DependentUpon>
     </Compile>
-    <Page Include="BeveragePage.xaml">
+    <Page Include="Pages\IngredientPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BuyOptionPage.xaml">
+    <Page Include="Pages\BeveragePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainPage.xaml">
+    <Page Include="Pages\BuyOptionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -85,38 +92,38 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BeveragePage.xaml.cs">
+    <Compile Include="Pages\BeveragePage.xaml.cs">
       <DependentUpon>BeveragePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BuyOptionPage.xaml.cs">
+    <Compile Include="Pages\BuyOptionPage.xaml.cs">
       <DependentUpon>BuyOptionPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="MenuPage.xaml">
+    <Page Include="Pages\MenuPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PaymentPage.xaml">
+    <Page Include="Pages\PaymentPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RecipePage.xaml">
+    <Page Include="Pages\RecipePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ThankYouPage.xaml">
+    <Page Include="Pages\ThankYouPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MenuPage.xaml.cs">
+    <Compile Include="Pages\MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -158,6 +165,17 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\pizza-love.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\make-pizza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\buy-pizza.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pizza-cheese.jpg" />
+    <Resource Include="Images\pizza-pepperoni.png" />
+    <Resource Include="Images\pizza-sauce.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
