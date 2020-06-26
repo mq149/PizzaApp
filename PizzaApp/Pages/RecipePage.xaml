@@ -10,7 +10,7 @@
 
     <Grid>
         <StackPanel HorizontalAlignment="Left" Width="495" Background="#FF8D0101" Margin="0">
-            <Button Content="Quay lại" Background="White" BorderBrush="#00707070" Foreground="Black" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" FontSize="16" Margin="10,0,0,0"/>
+            <Button Content="Quay lại" Background="White" BorderBrush="#00707070" Foreground="#FF8D0101" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" FontSize="16" Margin="10,0,0,0"/>
             <Label Content="NGUYÊN LIỆU" Height="40" Foreground="White" HorizontalAlignment="Center" FontFamily="Segoe UI Black" FontSize="20" Margin="136,35,136,0"/>
             <Rectangle Fill="#FFF4F4F5" Height="2" Stroke="#00000000" Margin="80,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="300"/>
             <StackPanel Height="191" Margin="55,0" Orientation="Horizontal" VerticalAlignment="Center">

@@ -22,6 +22,7 @@ namespace PizzaApp
     {
 
         int currentPageIndex = 0;
+        bool isCartPageShowing = false;
         BuyOption option = BuyOption.buyPizza;
 
         Page mainPage = new MainPage();
@@ -32,6 +33,7 @@ namespace PizzaApp
         Page recipePage = new RecipePage();
         Page paymentPage = new PaymentPage();
         Page thankYouPage = new ThankYouPage();
+        Page cartPage = new CartPage();
 
         public MainWindow()
         {
@@ -85,6 +87,14 @@ namespace PizzaApp
 
         private void backPage(BuyOption option)
         {
+            if (isCartPageShowing)
+            {
+                Main.Content = getCurrentPage(currentPageIndex);
+                isCartPageShowing = false;
+                nextButton.Visibility = Visibility.Visible;
+                updateWindow();
+                return;
+            }
             if (currentPageIndex == 0)
             {
                 //currentPageIndex = Config.pages.Length - 1;
@@ -122,8 +132,25 @@ namespace PizzaApp
             {
                 makePizzaCheckbox.Visibility = Visibility.Hidden;
             }
+
             BuyPizzaStatusGrid.Visibility = Visibility.Hidden;
             MakePizzaStatusGrid.Visibility = Visibility.Hidden;
+            if (isCartPageShowing)
+            {
+                cartButton.Visibility = Visibility.Hidden;
+                return;
+            }
+            else
+            {
+                cartButton.Visibility = Visibility.Visible;
+            }
+            if (Config.pages[currentPageIndex] == "menu" || Config.pages[currentPageIndex] == "beverage" || Config.pages[currentPageIndex] == "ingredients")
+            {
+                cartButton.Visibility = Visibility.Visible;
+            } else
+            {
+                cartButton.Visibility = Visibility.Hidden;
+            }
             if (option == BuyOption.buyPizza)
             {
                 if (Config.pages[currentPageIndex] == "menu")
@@ -280,6 +307,14 @@ namespace PizzaApp
         private void MakePizzaCheckBox_Click(object sender, RoutedEventArgs e)
         {
             option = (makePizzaCheckbox.IsChecked ?? false) ? BuyOption.makePizza : BuyOption.buyPizza;
+        }
+
+        private void CartButton_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = cartPage;
+            isCartPageShowing = true;
+            nextButton.Visibility = Visibility.Hidden;
+            updateWindow();
         }
     }
 }

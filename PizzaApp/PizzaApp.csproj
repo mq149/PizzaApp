@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CartPage.xaml.cs">
+      <DependentUpon>CartPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Common\Config.cs" />
     <Compile Include="Pages\IngredientPage.xaml.cs">
       <DependentUpon>IngredientPage.xaml</DependentUpon>
@@ -68,6 +71,10 @@
     <Compile Include="Pages\ThankYouPage.xaml.cs">
       <DependentUpon>ThankYouPage.xaml</DependentUpon>
     </Compile>
+    <Page Include="CartPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\IngredientPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -176,6 +183,12 @@
     <Resource Include="Images\pizza-cheese.jpg" />
     <Resource Include="Images\pizza-pepperoni.png" />
     <Resource Include="Images\pizza-sauce.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pizza-olive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cart-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,8 +9,8 @@
       Title="IngredientPage" Width="990" Height="532">
     <Grid HorizontalAlignment="Center" Height="532" VerticalAlignment="Center" Width="990">
         <StackPanel HorizontalAlignment="Left" Height="300" Margin="50,0,0,0" VerticalAlignment="Center" Width="250">
-            <Image x:Name="p1Image" Source="/PizzaApp;component/Images/pizza-sauce.png" Height="155"/>
-            <Label HorizontalContentAlignment="Center" Content="Sốt cà chua" Height="36" FontSize="20" FontFamily="Segoe UI Semibold"/>
+            <Image x:Name="p1Image" Source="/PizzaApp;component/Images/pizza-olive.png" Height="155"/>
+            <Label HorizontalContentAlignment="Center" Content="Ô liu" Height="36" FontSize="20" FontFamily="Segoe UI Semibold"/>
             <Label HorizontalContentAlignment="Center" Content="Mô tả nguyên liệu" FontFamily="Segoe UI Light" Height="44"/>
             <Button Content="Chọn nguyên liệu này" Margin="36,2,33,0" Height="45" Background="#FF8D0101" BorderBrush="#00707070" Foreground="White" Width="180" FontSize="16"/>
         </StackPanel>

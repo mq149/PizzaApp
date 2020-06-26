@@ -10,7 +10,7 @@
 
     <Grid>
         <StackPanel HorizontalAlignment="Left" Width="495" Background="#FF8D0101">
-            <Button Content="Quay lại" Background="White" BorderBrush="#00707070" Foreground="Black" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" FontSize="16" Margin="10,0,0,0"/>
+            <Button Content="Quay lại" Background="White" BorderBrush="#00707070" Foreground="#FF8D0101" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" FontSize="16" Margin="10,0,0,0"/>
             <Label Content="CHI TIẾT ĐƠN HÀNG" Height="39" Foreground="White" HorizontalAlignment="Center" FontFamily="Segoe UI Black" FontSize="20" Margin="136,35,136,0"/>
             <Rectangle Fill="#FFF4F4F5" Height="2" Stroke="#00000000" Margin="80,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="300"/>
             <StackPanel Height="242" Margin="62,0,95,0" Orientation="Horizontal">
@@ -36,27 +36,27 @@
             </StackPanel>
         </StackPanel>
         <StackPanel HorizontalAlignment="Right" Width="496">
-            <Rectangle Fill="#00F4F4F5" Height="43" Stroke="#00000000"/>
-            <Label Content="Chọn loại thẻ" FontFamily="Segoe UI Semibold" HorizontalAlignment="Center" FontSize="20"/>
+            <Label Content="CHỌN LOẠI THẺ" FontFamily="Segoe UI Black" HorizontalAlignment="Center" FontSize="20" Margin="0,40,0,0" Foreground="#FF000000"/>
+            <Rectangle Fill="#FF000000" Height="3" Stroke="#00000000" Width="360"/>
             <StackPanel Height="100" Orientation="Horizontal">
                 <Image Source="/PizzaApp;component/Images/visa.png" Width="116" Margin="50,0,0,0"/>
                 <Image Source="/PizzaApp;component/Images/master-card.png" Width="109" Margin="0,20"/>
                 <Image Source="/PizzaApp;component/Images/Paypal.png" Width="147"/>
             </StackPanel>
-            <Label Content="Số thẻ" FontSize="16" Margin="80,0"/>
-            <TextBox Height="33" TextWrapping="Wrap" Text="1234 4567 8945 7545" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" Margin="80,0" FontSize="18" FontFamily="Segoe UI Semibold"/>
+            <Label Content="Số thẻ" FontSize="16" Margin="80,0" Foreground="#FF000000"/>
+            <TextBox Height="33" TextWrapping="Wrap" Text="1234 4567 8945 7545" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" Margin="80,0" FontSize="18" FontFamily="Segoe UI Semibold" Foreground="#FF000000" BorderBrush="Black"/>
             <StackPanel Height="80" Orientation="Horizontal" Margin="0,20,0,0">
                 <StackPanel Height="80" Width="143" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="80,0,0,0">
-                    <Label Content="Ngày hết hạn" FontSize="16"/>
-                    <TextBox Height="33" TextWrapping="Wrap" Text="MM/YY" FontSize="18" FontFamily="Segoe UI Semibold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    <Label Content="Ngày hết hạn" FontSize="16" Foreground="#FF000000"/>
+                    <TextBox Height="33" TextWrapping="Wrap" Text="MM/YY" FontSize="18" FontFamily="Segoe UI Semibold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FF000000" Foreground="#FF000000"/>
                 </StackPanel>
                 <StackPanel Height="80" Width="138" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="46,-10,0,-10">
-                    <Label Content="CVV" FontSize="16"/>
-                    <TextBox Height="33" TextWrapping="Wrap" Text="" FontSize="18" FontFamily="Segoe UI Semibold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    <Label Content="CVV" FontSize="16" Foreground="#FF000000"/>
+                    <TextBox Height="33" TextWrapping="Wrap" Text="" FontSize="18" FontFamily="Segoe UI Semibold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FF000000" BorderBrush="#FF000000"/>
                 </StackPanel>
             </StackPanel>
-            <Label Content="Tên chủ thẻ" FontSize="16" Margin="80,0"/>
-            <TextBox Height="33" TextWrapping="Wrap" Text="" FontSize="18" FontFamily="Segoe UI Semibold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="80,0"/>
+            <Label Content="Tên chủ thẻ" FontSize="16" Margin="80,0" Foreground="Black"/>
+            <TextBox Height="33" TextWrapping="Wrap" Text="" FontSize="18" FontFamily="Segoe UI Semibold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="80,0" BorderBrush="Black" Foreground="Black"/>
             <Button Content="Thanh toán" Margin="0,20,0,0" Height="50" Width="200" HorizontalAlignment="Center" VerticalContentAlignment="Center" Background="#FF8D0101" Foreground="White" FontSize="20" BorderBrush="#00707070"/>
         </StackPanel>
     </Grid>

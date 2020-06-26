@@ -9,8 +9,8 @@
         ">
     <Grid HorizontalAlignment="Left" Height="566" Margin="0" VerticalAlignment="Top" Width="990">
         <Frame x:Name="Main" HorizontalAlignment="Left" Height="566" VerticalAlignment="Top" Width="990" NavigationUIVisibility="Hidden"/>
-        <Button Content="Trở về" HorizontalAlignment="Left" Margin="200,10,0,0" VerticalAlignment="Top" Width="75" Click="backButtonClick"/>
-        <Button Content="Tiếp tục" HorizontalAlignment="Left" Margin="280,10,0,0" VerticalAlignment="Top" Width="75" Click="nextButtonClick"/>
+        <Button x:Name="backButton" Content="Quay lại" HorizontalAlignment="Left" Margin="200,10,0,0" VerticalAlignment="Top" Width="75" Click="backButtonClick"/>
+        <Button x:Name="nextButton" Content="Tiếp tục" HorizontalAlignment="Left" Margin="280,10,0,0" VerticalAlignment="Top" Width="75" Click="nextButtonClick"/>
         <Grid x:Name="BuyPizzaStatusGrid" HorizontalAlignment="Left" Height="68" Margin="0,498,0,0" VerticalAlignment="Top" Width="990" Visibility="Hidden">
             <Rectangle Fill="#FF63B995" HorizontalAlignment="Center" Height="3" Margin="0,0,0,31" Stroke="#00000000" VerticalAlignment="Center" Width="390"/>
             <StackPanel HorizontalAlignment="Center" Height="52" Margin="0,0,400,0" VerticalAlignment="Center" Width="100">
@@ -25,7 +25,7 @@
                 <RadioButton x:Name="rb03" Content="" VerticalAlignment="Center" Background="White" Foreground="Black" BorderBrush="#FF63B995" Height="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="5.66,1.561" Margin="0" Padding="0" HorizontalAlignment="Center"/>
                 <Label x:Name="statuslb03" Content="Thanh toán" HorizontalContentAlignment="Center"/>
             </StackPanel>
-        </Grid> 
+        </Grid>
         <Grid x:Name="MakePizzaStatusGrid" HorizontalAlignment="Left" Height="68" Margin="0,498,0,0" VerticalAlignment="Top" Width="990" Visibility="Hidden">
             <Rectangle Fill="#FF63B995" HorizontalAlignment="Center" Height="3" Margin="0,0,0,31" Stroke="#00000000" VerticalAlignment="Center" Width="550"/>
             <StackPanel HorizontalAlignment="Center" Height="52" Margin="0,0,550,0" VerticalAlignment="Center" Width="120">
@@ -46,6 +46,9 @@
             </StackPanel>
         </Grid>
         <CheckBox x:Name="makePizzaCheckbox" Content="Tự làm bánh" HorizontalAlignment="Left" Margin="371,13,0,0" VerticalAlignment="Top" Click="MakePizzaCheckBox_Click"/>
+        <Button x:Name="cartButton" HorizontalAlignment="Right" Margin="0" VerticalAlignment="Center" Width="60" Height="60" Background="#FF8D0101" BorderBrush="#00707070" Foreground="#00000000" Click="CartButton_Click">
+            <Image Height="50" Width="50" Source="Images/cart-icon.png"/>
+        </Button>
     </Grid>
 </Window>
    

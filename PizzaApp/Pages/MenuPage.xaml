@@ -16,16 +16,16 @@
                 <StackPanel Width="120">
                     <Label Content="Chọn cỡ bánh"/>
                     <ComboBox BorderBrush="#00ACACAC" SelectedIndex="0">
-                        <ComboBoxItem x:Name="cbip11" Content="Cỡ vừa 9-inch"/>
-                        <ComboBoxItem x:Name="cbip12" Content="Cỡ lớn 12-inch"/>
+                        <ComboBoxItem x:Name="cbip11" Content="Cỡ nhỏ"/>
+                        <ComboBoxItem x:Name="cbip12" Content="Cỡ trung"/>
+                        <ComboBoxItem x:Name="cbip13" Content="Cỡ lớn"/>
                     </ComboBox>
                 </StackPanel>
                 <StackPanel Width="120" Margin="10,0,0,0">
-                    <Label Content="Chọn đế bánh"/>
+                    <Label Content="Chọn vỏ bánh"/>
                     <ComboBox BorderBrush="#00ACACAC" SelectedIndex="0">
-                        <ComboBoxItem x:Name="cbip14" Content="Đế mỏng"/>
-                        <ComboBoxItem x:Name="cbip15" Content="Đế vừa"/>
-                        <ComboBoxItem x:Name="cbip16" Content="Đế dày"/>
+                        <ComboBoxItem x:Name="cbip14" Content="Vỏ dòn"/>
+                        <ComboBoxItem x:Name="cbip15" Content="Vỏ dày"/>
                     </ComboBox>
                 </StackPanel>
 
@@ -40,16 +40,16 @@
                 <StackPanel Width="120">
                     <Label Content="Chọn cỡ bánh"/>
                     <ComboBox BorderBrush="#00ACACAC" SelectedIndex="0">
-                        <ComboBoxItem x:Name="cbip21" Content="Cỡ vừa 9-inch"/>
-                        <ComboBoxItem x:Name="cbip22" Content="Cỡ lớn 12-inch"/>
+                        <ComboBoxItem x:Name="cbip21" Content="Cỡ nhỏ"/>
+                        <ComboBoxItem x:Name="cbip22" Content="Cỡ trung"/>
+                        <ComboBoxItem x:Name="cbip23" Content="Cỡ lớn"/>
                     </ComboBox>
                 </StackPanel>
                 <StackPanel Width="120" Margin="10,0,0,0">
-                    <Label Content="Chọn đế bánh"/>
+                    <Label Content="Chọn vỏ bánh"/>
                     <ComboBox BorderBrush="#00ACACAC" SelectedIndex="0">
-                        <ComboBoxItem x:Name="cbip24" Content="Đế mỏng"/>
-                        <ComboBoxItem x:Name="cbip25" Content="Đế vừa"/>
-                        <ComboBoxItem x:Name="cbip26" Content="Đế dày"/>
+                        <ComboBoxItem x:Name="cbip24" Content="Vỏ dòn"/>
+                        <ComboBoxItem x:Name="cbip25" Content="Vỏ dày"/>
                     </ComboBox>
                 </StackPanel>
 
@@ -66,16 +66,16 @@
                 <StackPanel Width="120">
                     <Label Content="Chọn cỡ bánh"/>
                     <ComboBox BorderBrush="#00ACACAC" SelectedIndex="0">
-                        <ComboBoxItem x:Name="cbip31" Content="Cỡ vừa 9-inch"/>
-                        <ComboBoxItem x:Name="cbip32" Content="Cỡ lớn 12-inch"/>
+                        <ComboBoxItem x:Name="cbip31" Content="Cỡ nhỏ"/>
+                        <ComboBoxItem x:Name="cbip32" Content="Cỡ trung"/>
+                        <ComboBoxItem x:Name="cbip33" Content="Cỡ lớn"/>
                     </ComboBox>
                 </StackPanel>
                 <StackPanel Width="120" Margin="10,0,0,0">
-                    <Label Content="Chọn đế bánh"/>
+                    <Label Content="Chọn vỏ bánh"/>
                     <ComboBox BorderBrush="#00ACACAC" SelectedIndex="0">
-                        <ComboBoxItem x:Name="cbip33" Content="Đế mỏng"/>
-                        <ComboBoxItem x:Name="cbip34" Content="Đế vừa"/>
-                        <ComboBoxItem x:Name="cbip35" Content="Đế dày"/>
+                        <ComboBoxItem x:Name="cbip34" Content="Vỏ dòn"/>
+                        <ComboBoxItem x:Name="cbip35" Content="Vỏ dày"/>
                     </ComboBox>
                 </StackPanel>
 
