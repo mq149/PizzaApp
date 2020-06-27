@@ -21,7 +21,7 @@
         </Image>
         <StackPanel HorizontalAlignment="Left" Height="273" Margin="0,299,0,0" VerticalAlignment="Top" Width="990" Background="#FF8D0101">
             <Label HorizontalContentAlignment="Center" Content="Thanh toán hoàn tất" Foreground="White" Height="54" FontFamily="Segoe UI Semibold" FontSize="24" Margin="0,40,0,0"/>
-            <Label HorizontalContentAlignment="Center" Content="Cảm ơn và chúc quý khách ngon miệng" Foreground="White" Height="75" FontFamily="Segoe UI Semibold" FontSize="28"/>
+            <Label HorizontalContentAlignment="Center" Content="Cảm ơn và chúc quý khách ngon miệng!" Foreground="White" Height="75" FontFamily="Segoe UI Semibold" FontSize="28"/>
             <Button Content="Quay về trang chủ" Margin="0" Height="50" Width="200" Background="White" BorderBrush="#00837878" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FF8D0101"/>
         </StackPanel>
     </Grid>

@@ -42,6 +42,19 @@ namespace PizzaApp
             updateWindow();
         }
 
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Right)
+            {
+                nextPage(option);
+                Main.Content = getCurrentPage(currentPageIndex);
+            } else if (e.Key == Key.Left)
+            {
+                backPage(option);
+                Main.Content = getCurrentPage(currentPageIndex);
+            }
+        }
+
         private void backButtonClick(object sender, RoutedEventArgs e)
         {
             backPage(option);
@@ -125,16 +138,69 @@ namespace PizzaApp
 
         private void updateWindow()
         {
+            // back and next Button
+            backButton.Visibility = Visibility.Hidden;
+            nextButton.Visibility = Visibility.Hidden;
+            if (Config.pages[currentPageIndex] == "menu" || Config.pages[currentPageIndex] == "ingredients" ||
+                Config.pages[currentPageIndex] == "beverage" || Config.pages[currentPageIndex] == "recipe" || Config.pages[currentPageIndex] == "payment")
+            {
+                backButton.Visibility = Visibility.Visible;
+                nextButton.Visibility = Visibility.Visible;
+                backButton.Background = (Brush)new BrushConverter().ConvertFrom(Config.red);
+                backButton.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.white);
+                nextButton.Background = (Brush)new BrushConverter().ConvertFrom(Config.red);
+                nextButton.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.white);
+                backButton.Content = "Quay lại";
+                nextButton.Content = "Tiếp tục";
+                if (isCartPageShowing)
+                {
+                    backButton.Visibility = Visibility.Hidden;
+                    nextButton.Visibility = Visibility.Hidden;
+                }
+                if (Config.pages[currentPageIndex] == "recipe")
+                {
+                    backButton.Background = (Brush)new BrushConverter().ConvertFrom(Config.white);
+                    backButton.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.black);
+                    nextButton.Content = "Hoàn thành";
+                } 
+                if (Config.pages[currentPageIndex] == "payment")
+                {
+                    backButton.Background = (Brush)new BrushConverter().ConvertFrom(Config.white);
+                    backButton.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.black);
+                    nextButton.Visibility = Visibility.Hidden;
+                }
+            }
+            
+            // buyOptions Grid 
             if (Config.pages[currentPageIndex] == "buyOptions")
             {
-                makePizzaCheckbox.Visibility = Visibility.Visible;
+                buyOptionsGrid.Visibility = Visibility.Visible;
             } else
             {
-                makePizzaCheckbox.Visibility = Visibility.Hidden;
+                buyOptionsGrid.Visibility = Visibility.Hidden;
             }
-
+            // pay Button
+            if (Config.pages[currentPageIndex] == "payment")
+            {
+                payButton.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                payButton.Visibility = Visibility.Hidden;
+            }
+            // backToMenu Button
+            if (Config.pages[currentPageIndex] == "thankYou")
+            {
+                backToMenuButton.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                backToMenuButton.Visibility = Visibility.Hidden;
+            }
+            // status Grid
             BuyPizzaStatusGrid.Visibility = Visibility.Hidden;
             MakePizzaStatusGrid.Visibility = Visibility.Hidden;
+            // cart Button
             if (isCartPageShowing)
             {
                 cartButton.Visibility = Visibility.Hidden;
@@ -151,37 +217,38 @@ namespace PizzaApp
             {
                 cartButton.Visibility = Visibility.Hidden;
             }
+            // status Grid
             if (option == BuyOption.buyPizza)
             {
                 if (Config.pages[currentPageIndex] == "menu")
                 {
                     BuyPizzaStatusGrid.Visibility = Visibility.Visible;
-                    rb01.Background = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    rb02.Background = (Brush)new BrushConverter().ConvertFrom(Config.statusDefaultColor);
-                    rb03.Background = (Brush)new BrushConverter().ConvertFrom(Config.statusDefaultColor);
-                    statuslb01.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    statuslb02.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.statusLabelDefaultColor);
-                    statuslb03.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.statusLabelDefaultColor);
+                    rb01.Background = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    rb02.Background = (Brush)new BrushConverter().ConvertFrom(Config.white);
+                    rb03.Background = (Brush)new BrushConverter().ConvertFrom(Config.white);
+                    statuslb01.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    statuslb02.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.black);
+                    statuslb03.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.black);
                 }
                 else if (Config.pages[currentPageIndex] == "beverage")
                 {
                     BuyPizzaStatusGrid.Visibility = Visibility.Visible;
-                    rb01.Background = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    rb02.Background = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    rb03.Background = (Brush)new BrushConverter().ConvertFrom(Config.statusDefaultColor);
-                    statuslb01.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    statuslb02.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    statuslb03.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.statusLabelDefaultColor);
+                    rb01.Background = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    rb02.Background = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    rb03.Background = (Brush)new BrushConverter().ConvertFrom(Config.white);
+                    statuslb01.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    statuslb02.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    statuslb03.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.black);
                 }
                 else if (Config.pages[currentPageIndex] == "payment")
                 {
                     BuyPizzaStatusGrid.Visibility = Visibility.Visible;
-                    rb01.Background = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    rb02.Background = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    rb03.Background = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    statuslb01.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    statuslb02.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    statuslb03.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
+                    rb01.Background = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    rb02.Background = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    rb03.Background = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    statuslb01.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    statuslb02.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    statuslb03.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.green);
                 }
                 else
                 {
@@ -193,50 +260,50 @@ namespace PizzaApp
                 if (Config.pages[currentPageIndex] == "ingredients")
                 {
                     MakePizzaStatusGrid.Visibility = Visibility.Visible;
-                    rb11.Background = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    rb12.Background = (Brush)new BrushConverter().ConvertFrom(Config.statusDefaultColor);
-                    rb13.Background = (Brush)new BrushConverter().ConvertFrom(Config.statusDefaultColor);
-                    rb14.Background = (Brush)new BrushConverter().ConvertFrom(Config.statusDefaultColor);
-                    statuslb11.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    statuslb12.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.statusLabelDefaultColor);
-                    statuslb13.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.statusLabelDefaultColor);
-                    statuslb14.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.statusLabelDefaultColor);
+                    rb11.Background = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    rb12.Background = (Brush)new BrushConverter().ConvertFrom(Config.white);
+                    rb13.Background = (Brush)new BrushConverter().ConvertFrom(Config.white);
+                    rb14.Background = (Brush)new BrushConverter().ConvertFrom(Config.white);
+                    statuslb11.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    statuslb12.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.black);
+                    statuslb13.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.black);
+                    statuslb14.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.black);
                 }
                 else if (Config.pages[currentPageIndex] == "beverage")
                 {
                     MakePizzaStatusGrid.Visibility = Visibility.Visible;
-                    rb11.Background = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    rb12.Background = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    rb13.Background = (Brush)new BrushConverter().ConvertFrom(Config.statusDefaultColor);
-                    rb14.Background = (Brush)new BrushConverter().ConvertFrom(Config.statusDefaultColor);
-                    statuslb11.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    statuslb12.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    statuslb13.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.statusLabelDefaultColor);
-                    statuslb14.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.statusLabelDefaultColor);
+                    rb11.Background = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    rb12.Background = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    rb13.Background = (Brush)new BrushConverter().ConvertFrom(Config.white);
+                    rb14.Background = (Brush)new BrushConverter().ConvertFrom(Config.white);
+                    statuslb11.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    statuslb12.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    statuslb13.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.black);
+                    statuslb14.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.black);
                 }
                 else if (Config.pages[currentPageIndex] == "recipe")
                 {
                     MakePizzaStatusGrid.Visibility = Visibility.Visible;
-                    rb11.Background = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    rb12.Background = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    rb13.Background = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    rb14.Background = (Brush)new BrushConverter().ConvertFrom(Config.statusDefaultColor);
-                    statuslb11.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    statuslb12.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    statuslb13.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    statuslb14.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.statusLabelDefaultColor);
+                    rb11.Background = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    rb12.Background = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    rb13.Background = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    rb14.Background = (Brush)new BrushConverter().ConvertFrom(Config.white);
+                    statuslb11.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    statuslb12.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    statuslb13.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    statuslb14.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.black);
                 }
                 else if (Config.pages[currentPageIndex] == "payment")
                 {
                     MakePizzaStatusGrid.Visibility = Visibility.Visible;
-                    rb11.Background = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    rb12.Background = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    rb13.Background = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    rb14.Background = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    statuslb11.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    statuslb12.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    statuslb13.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
-                    statuslb14.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.statusActiveColor);
+                    rb11.Background = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    rb12.Background = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    rb13.Background = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    rb14.Background = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    statuslb11.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    statuslb12.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    statuslb13.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.green);
+                    statuslb14.Foreground = (Brush)new BrushConverter().ConvertFrom(Config.green);
                 }
                 else
                 {
@@ -273,7 +340,7 @@ namespace PizzaApp
 
         public void goToPage(string pageId)
         {
-            switch (Config.pages[currentPageIndex])
+            switch (pageId)
             {
                 case "main":
                     Main.Content = mainPage;
@@ -304,17 +371,48 @@ namespace PizzaApp
             }
         }
 
-        private void MakePizzaCheckBox_Click(object sender, RoutedEventArgs e)
-        {
-            option = (makePizzaCheckbox.IsChecked ?? false) ? BuyOption.makePizza : BuyOption.buyPizza;
-        }
-
         private void CartButton_Click(object sender, RoutedEventArgs e)
         {
             Main.Content = cartPage;
             isCartPageShowing = true;
             nextButton.Visibility = Visibility.Hidden;
             updateWindow();
+            backToMenuButton.Visibility = Visibility.Visible;
+        }
+
+        private void buyPizzaButton_Click(object sender, RoutedEventArgs e)
+        {
+            option = BuyOption.buyPizza;
+            nextPage(option);
+            Main.Content = getCurrentPage(currentPageIndex);
+
+        }
+
+        private void MakePizzaButton_Click(object sender, RoutedEventArgs e)
+        {
+            option = BuyOption.makePizza;
+            nextPage(option);
+            Main.Content = getCurrentPage(currentPageIndex);
+        }
+
+        private void BackToMenuButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (isCartPageShowing)
+            {
+                backPage(option);
+                Main.Content = getCurrentPage(currentPageIndex);
+                backToMenuButton.Visibility = Visibility.Visible;
+            } else
+            {
+                nextPage(option);
+                Main.Content = getCurrentPage(currentPageIndex);
+            }
+        }
+
+        private void PayButton_Click(object sender, RoutedEventArgs e)
+        {
+            nextPage(option);
+            Main.Content = getCurrentPage(currentPageIndex);
         }
     }
 }

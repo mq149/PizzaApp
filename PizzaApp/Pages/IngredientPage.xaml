@@ -20,8 +20,6 @@
             <Label HorizontalContentAlignment="Center" Content="Mô tả nguyên liệu" FontFamily="Segoe UI Light" Height="44"/>
             <Button Content="Chọn nguyên liệu này" Margin="36,2,33,0" Height="45" Background="#FF8D0101" BorderBrush="#00707070" Foreground="White" Width="180" FontSize="16"/>
         </StackPanel>
-        <Button Content="Tiếp tục" Background="#FF8D0101" BorderBrush="#00707070" Foreground="White" Width="100" HorizontalAlignment="Right" VerticalAlignment="Top" Height="40" FontSize="16" Margin="0,0,10,0"/>
-        <Button Content="Quay lại" Background="#FF8D0101" BorderBrush="#00707070" Foreground="White" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" FontSize="16" Margin="10,0,0,0"/>
         <StackPanel HorizontalAlignment="Right" Height="300" Margin="0,0,50,0" VerticalAlignment="Center" Width="250">
             <Image Source="/PizzaApp;component/Images/pizza-cheese.jpg" Height="155"/>
             <Label HorizontalContentAlignment="Center" Content="Phô mai Mozzarella" Height="36" FontSize="20" FontFamily="Segoe UI Semibold"/>

@@ -23,6 +23,7 @@ namespace PizzaApp
         public ThankYouPage()
         {
             InitializeComponent();
+            
         }
     }
 }

@@ -9,16 +9,16 @@
       Title="RecipePage">
 
     <Grid>
-        <StackPanel HorizontalAlignment="Left" Width="495" Background="#FF8D0101" Margin="0">
-            <Button Content="Quay lại" Background="White" BorderBrush="#00707070" Foreground="#FF8D0101" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" FontSize="16" Margin="10,0,0,0"/>
-            <Label Content="NGUYÊN LIỆU" Height="40" Foreground="White" HorizontalAlignment="Center" FontFamily="Segoe UI Black" FontSize="20" Margin="136,35,136,0"/>
+        <StackPanel HorizontalAlignment="Left" Width="495" Background="#FF8D0101" Margin="0,0,0,70">
+            <Label Content="NGUYÊN LIỆU" Height="37" Foreground="White" HorizontalAlignment="Center" FontFamily="Segoe UI Black" FontSize="20" Margin="136,30,136,0"/>
             <Rectangle Fill="#FFF4F4F5" Height="2" Stroke="#00000000" Margin="80,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="300"/>
-            <StackPanel Height="191" Margin="55,0" Orientation="Horizontal" VerticalAlignment="Center">
-                <StackPanel Height="150" Margin="0,20,0,0" Width="180" VerticalAlignment="Top">
+            <StackPanel Height="237" Margin="55,0" Orientation="Horizontal" VerticalAlignment="Center">
+                <StackPanel Height="213" Margin="0,20,0,0" Width="180" VerticalAlignment="Top">
                     <Label Content="Bánh pizza" Foreground="White" FontSize="16" FontFamily="Segoe UI Symbol" Height="40"/>
                     <Label Content="Sốt cà chua" Foreground="White" FontSize="16" FontFamily="Segoe UI Symbol" Height="40"/>
                     <Label Content="Phô mai" Foreground="White" FontSize="16" FontFamily="Segoe UI Symbol" Height="40"/>
                     <Label Content="Thịt nguội" Foreground="White" FontSize="16" FontFamily="Segoe UI Symbol" Height="40"/>
+                    <Label Content="Lá oregano khô" Foreground="White" FontSize="16" FontFamily="Segoe UI Symbol" Height="40"/>
                 </StackPanel>
                 <StackPanel Height="150" Margin="0,20,0,0" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right">
                     <Label Content="1 bánh" Foreground="White" HorizontalAlignment="Right" FontSize="16" FontFamily="Segoe UI Symbol" Height="40"/>
@@ -29,17 +29,20 @@
             </StackPanel>
             <Rectangle Fill="#FFF4F4F5" Height="2" Stroke="#00000000" Margin="80,0" Width="300" HorizontalAlignment="Center"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Right" Width="495" Background="#008D0101">
-            <Button Content="Hoàn thành" Background="#FF8D0101" BorderBrush="#00707070" Foreground="White" Width="100" HorizontalAlignment="Right" VerticalAlignment="Top" Height="40" FontSize="16" Margin="0,0,10,0"/>
-            <Label Content="CÁC BƯỚC LÀM BÁNH" Height="40" Foreground="Black" HorizontalAlignment="Center" FontFamily="Segoe UI Black" FontSize="20" Margin="116,35,116,0" Width="234"/>
+        <StackPanel HorizontalAlignment="Right" Width="495" Background="#008D0101" Margin="0,0,0,70">
+            <Label Content="CÁC BƯỚC LÀM BÁNH" Height="37" Foreground="Black" HorizontalAlignment="Center" FontFamily="Segoe UI Black" FontSize="20" Margin="116,30,116,0" Width="234"/>
             <Rectangle Fill="Black" Height="2" Stroke="#00000000" Margin="80,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="300"/>
             <StackPanel Height="383" Margin="55,0" VerticalAlignment="Center">
-                <Label Content="Bước 1:" Foreground="Black" FontSize="16" FontFamily="Segoe UI Semibold" Height="30" Background="#00000000"/>
-                <TextBlock TextWrapping="Wrap" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." FontSize="14" Margin="10,0,0,0"/>
-                <Label Content="Bước 2:" Foreground="Black" FontSize="16" FontFamily="Segoe UI Semibold" Height="30" Background="#00000000"/>
-                <TextBlock TextWrapping="Wrap" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." FontSize="14" Margin="10,0,0,0"/>
-                <Label Content="Bước 3:" Foreground="Black" FontSize="16" FontFamily="Segoe UI Semibold" Height="30" Background="#00000000"/>
-                <TextBlock TextWrapping="Wrap" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." FontSize="14" Margin="10,0,0,0"/>
+                <ScrollViewer Height="383" Margin="0,0,-18,0">
+                    <Grid>
+                        <Label Content="Bước 1:" Foreground="Black" FontSize="16" FontFamily="Segoe UI Semibold" Background="#00000000" Margin="0,20,10,420"/>
+                        <TextBlock TextWrapping="Wrap" Text="Phết 1 lớp mỏng hỗn hợp xốt cà chua lên đế pizza, xếp thịt nguội và thơm lên, phủ đều phô mai sợi lên mặt bánh, sau cùng rắc 1 ít lá oregano lên trên." FontSize="14" Margin="10,56,10,321"/>
+                        <Label Content="Bước 2:" Foreground="Black" FontSize="16" FontFamily="Segoe UI Semibold" Background="#00000000" Margin="0,150,-17,297"/>
+                        <TextBlock TextWrapping="Wrap" Text="Làm nóng lò, cho bánh vào nướng đến khi bánh chín vàng, phô mai chảy có màu vàng nâu." FontSize="14" Margin="10,189,10,209"/>
+                        <Label Content="Bước 3:" Foreground="Black" FontSize="16" FontFamily="Segoe UI Semibold" Background="#00000000" Margin="0,277,-17,173"/>
+                        <TextBlock TextWrapping="Wrap" Text="Cắt bánh thanh những miếng vừa ăn, dùng kèm tương cà hoặc tương ớt." FontSize="14" Margin="10,313,10,75"/>
+                    </Grid>
+                </ScrollViewer>
             </StackPanel>
             <Rectangle Fill="Black" Height="2" Stroke="#00000000" Margin="80,0" Width="300" HorizontalAlignment="Center"/>
         </StackPanel>

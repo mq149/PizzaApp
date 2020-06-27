@@ -9,8 +9,8 @@
         ">
     <Grid HorizontalAlignment="Left" Height="566" Margin="0" VerticalAlignment="Top" Width="990">
         <Frame x:Name="Main" HorizontalAlignment="Left" Height="566" VerticalAlignment="Top" Width="990" NavigationUIVisibility="Hidden"/>
-        <Button x:Name="backButton" Content="Quay lại" HorizontalAlignment="Left" Margin="200,10,0,0" VerticalAlignment="Top" Width="75" Click="backButtonClick"/>
-        <Button x:Name="nextButton" Content="Tiếp tục" HorizontalAlignment="Left" Margin="280,10,0,0" VerticalAlignment="Top" Width="75" Click="nextButtonClick"/>
+        <Button x:Name="backButton" Content="Quay lại" Background="#FF8D0101" BorderBrush="#00707070" Foreground="White" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" FontSize="16" Margin="10,0,0,0" Click="backButtonClick"/>
+        <Button x:Name="nextButton" Content="Tiếp tục" Background="#FF8D0101" BorderBrush="#00707070" Foreground="White" Width="100" HorizontalAlignment="Right" VerticalAlignment="Top" Height="40" FontSize="16" Margin="0,0,10,0" Click="nextButtonClick"/>
         <Grid x:Name="BuyPizzaStatusGrid" HorizontalAlignment="Left" Height="68" Margin="0,498,0,0" VerticalAlignment="Top" Width="990" Visibility="Hidden">
             <Rectangle Fill="#FF63B995" HorizontalAlignment="Center" Height="3" Margin="0,0,0,31" Stroke="#00000000" VerticalAlignment="Center" Width="390"/>
             <StackPanel HorizontalAlignment="Center" Height="52" Margin="0,0,400,0" VerticalAlignment="Center" Width="100">
@@ -45,10 +45,15 @@
                 <Label x:Name="statuslb14" Content="Thanh toán" HorizontalContentAlignment="Center"/>
             </StackPanel>
         </Grid>
-        <CheckBox x:Name="makePizzaCheckbox" Content="Tự làm bánh" HorizontalAlignment="Left" Margin="371,13,0,0" VerticalAlignment="Top" Click="MakePizzaCheckBox_Click"/>
-        <Button x:Name="cartButton" HorizontalAlignment="Right" Margin="0" VerticalAlignment="Center" Width="60" Height="60" Background="#FF8D0101" BorderBrush="#00707070" Foreground="#00000000" Click="CartButton_Click">
-            <Image Height="50" Width="50" Source="Images/cart-icon.png"/>
+        <Button x:Name="cartButton" HorizontalAlignment="Right" Margin="0,80,0,0" VerticalAlignment="Top" Width="70" Height="60" Background="#FF8D0101" BorderBrush="#00707070" Foreground="#00000000" Click="CartButton_Click">
+            <Image Height="50" Width="50" Source="Images/cart-icon.png" Margin="0,0,5,0"/>
         </Button>
+        <StackPanel x:Name="buyOptionsGrid" HorizontalAlignment="Center" Height="350" Margin="0" VerticalAlignment="Center" Width="460" Orientation="Horizontal">
+            <Button x:Name="buyPizzaButton" Content="" HorizontalAlignment="Center" Margin="0,0,20,0" VerticalAlignment="Center" Width="220" Height="350" Background="#00000000" BorderBrush="#00000000" Foreground="#00000000" Click="buyPizzaButton_Click" OpacityMask="#00000000"/>
+            <Button x:Name="makePizzaButton" Content="" HorizontalAlignment="Left" Margin="0" Width="220" Height="350" Background="#00000000" BorderBrush="#00000000" Foreground="#00000000" Click="MakePizzaButton_Click" OpacityMask="#00000000"/>
+        </StackPanel>
+        <Button x:Name="payButton" Content="" Margin="583,442,53,25" Width="354" HorizontalAlignment="Center" VerticalContentAlignment="Center" Background="#00000000" Foreground="#00000000" FontSize="20" BorderBrush="#00000000" Click="PayButton_Click" OpacityMask="#00000000"/>
+        <Button x:Name="backToMenuButton" Content="" HorizontalAlignment="Center" Margin="0,0,0,30" VerticalAlignment="Bottom" Width="272" Height="105" Background="#00000000" BorderBrush="#00000000" Foreground="#00000000" Click="BackToMenuButton_Click" OpacityMask="#00000000"/>
     </Grid>
 </Window>
    

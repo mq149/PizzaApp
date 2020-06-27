@@ -190,5 +190,13 @@
   <ItemGroup>
     <Resource Include="Images\cart-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pizza_transparent_2.png" />
+    <Resource Include="Images\pizza_transparent_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\coca-cola.png" />
+    <Resource Include="Images\dasani.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

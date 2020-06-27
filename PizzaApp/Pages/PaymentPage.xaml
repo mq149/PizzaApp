@@ -9,9 +9,8 @@
       Title="PaymentPage">
 
     <Grid>
-        <StackPanel HorizontalAlignment="Left" Width="495" Background="#FF8D0101">
-            <Button Content="Quay lại" Background="White" BorderBrush="#00707070" Foreground="#FF8D0101" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" FontSize="16" Margin="10,0,0,0"/>
-            <Label Content="CHI TIẾT ĐƠN HÀNG" Height="39" Foreground="White" HorizontalAlignment="Center" FontFamily="Segoe UI Black" FontSize="20" Margin="136,35,136,0"/>
+        <StackPanel HorizontalAlignment="Left" Width="495" Background="#FF8D0101" Margin="0,0,0,70">
+            <Label Content="CHI TIẾT ĐƠN HÀNG" Height="37" Foreground="White" HorizontalAlignment="Center" FontFamily="Segoe UI Black" FontSize="20" Margin="136,30,136,0"/>
             <Rectangle Fill="#FFF4F4F5" Height="2" Stroke="#00000000" Margin="80,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="300"/>
             <StackPanel Height="242" Margin="62,0,95,0" Orientation="Horizontal">
                 <StackPanel Height="150" Margin="0,20,0,0" Width="153" VerticalAlignment="Top">
@@ -35,8 +34,8 @@
                 </StackPanel>
             </StackPanel>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Right" Width="496">
-            <Label Content="CHỌN LOẠI THẺ" FontFamily="Segoe UI Black" HorizontalAlignment="Center" FontSize="20" Margin="0,40,0,0" Foreground="#FF000000"/>
+        <StackPanel HorizontalAlignment="Right" Width="496" Margin="0,0,0,70">
+            <Label Content="CHỌN LOẠI THẺ" FontFamily="Segoe UI Black" HorizontalAlignment="Center" FontSize="20" Margin="0,30,0,0" Foreground="#FF000000"/>
             <Rectangle Fill="#FF000000" Height="3" Stroke="#00000000" Width="360"/>
             <StackPanel Height="100" Orientation="Horizontal">
                 <Image Source="/PizzaApp;component/Images/visa.png" Width="116" Margin="50,0,0,0"/>
